@@ -1,3 +1,4 @@
-modbus_server.py – Simulates a Modbus server locally holding modbus values.
-setslide.py – Sends Modbus values (1, 2, 3) to simulate control input.
-modbuspptcontrol.py – Reads Modbus values and switches slides in a presentation (The presentation I have is 3 slides).
+- modbus_server.py – Simulates a Modbus server locally holding modbus values.
+- setslide.py – Sends Modbus values (1, 2, 3) to simulate control input.
+- modbuspptcontrol.py – Reads Modbus values and switches slides in a presentation (The presentation I have is 3 slides).
+RUN THE MODBUS SERVER ON COMMAND PROMPT FIRST BY NAVIGATING TO THAT FILE PATH AND THEN CHECK ON ANOTHER COMMAND PROMPT TAB IS THE SERVER IS RUNNING BY TYPING "netstat -ano | findstr :5020" WHICH LOOKS IF THE PORT IS ACTIVE AND RUNNING. THEN RUN THE SETSLIDE.PY ON ANOTHER COMMAND PROMPT TAB AND AFTER RUN THE MODBUSPPTCONTROL.PY ON IDLE AND YOU SHOULD HAVE THE PPT POP UP. ALSO DONT FORGET TO SAVE THE PPT FILE AND ON THE MODBUSPPTCONTROL.PY CHANGE THE PPT NAME ACCORDINGLY.
