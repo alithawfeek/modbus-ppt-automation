@@ -12,17 +12,17 @@
 ### Steps to run
 - Open a Windows powershell tab and navigate to the directory where this repository lives and run:
 ```bash
-        python modbus_server.py
-    ```
+    python modbus_server.py
+```
 - To check if the port is running:
 ```bash
-        netstat -ano | findstr :502
-        ```
+    netstat -ano | findstr :502
+```
 - Open another powerhsell tab and run:
 ```bash
-        python modbuspptcontrol.py
-        ```
+    python modbuspptcontrol.py
+```
 - Similarly open another tab to run the script to change the slides:
 ```bash
-        python setslide.py
-        ```
+    python setslide.py
+```
