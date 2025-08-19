@@ -1,8 +1,26 @@
+# ModBus implementation to control PPT slides
 - modbus_server.py – Simulates a Modbus server locally holding modbus values.
 - setslide.py – Sends Modbus values (1, 2, 3) to simulate control input.
 - modbuspptcontrol.py – Reads Modbus values and switches slides in a presentation (The presentation I have is 3 slides).
 
+### Dependencies to install
+- pip install pypiwin32
+- Check the name of the ppt in 'modbuspptcontrol.py' script
 
-
-
-RUN THE MODBUS SERVER ON COMMAND PROMPT FIRST BY NAVIGATING TO THAT FILE PATH AND THEN CHECK ON ANOTHER COMMAND PROMPT TAB IS THE SERVER IS RUNNING BY TYPING "netstat -ano | findstr :5020" WHICH LOOKS IF THE PORT IS ACTIVE AND RUNNING. THEN RUN THE SETSLIDE.PY ON ANOTHER COMMAND PROMPT TAB AND AFTER RUN THE MODBUSPPTCONTROL.PY ON IDLE AND YOU SHOULD HAVE THE PPT POP UP. ALSO DONT FORGET TO SAVE THE PPT FILE AND ON THE MODBUSPPTCONTROL.PY CHANGE THE PPT NAME ACCORDINGLY.
+### Steps to run
+- Open a Windows powershell tab and navigate to the directory where this repository lives.
+    - Run ```bash
+        python modbus_server.py
+        ```
+- To check if the port is running:
+    - ```bash
+        netstat -ano | findstr :502
+        ```
+- Open another powerhsell tab and run:
+    - ```bash
+        python modbuspptcontrol.py
+        ```
+- Similarly open another tab to run the script to change the slides:
+    - ```bash
+        python setslide.py
+        ```

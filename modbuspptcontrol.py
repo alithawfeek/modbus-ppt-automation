@@ -1,6 +1,7 @@
 import time
 import win32com.client
 from pymodbus.client.sync import ModbusTcpClient
+import os
 
 # Connecting to Modbus server
 client = ModbusTcpClient('localhost', port=5020)
@@ -14,7 +15,8 @@ ppt = win32com.client.Dispatch("PowerPoint.Application")
 ppt.Visible = True
 
 # PPT file path
-ppt_file = r"C:\Users\me4mamt\Downloads\testformodbus.pptx"
+ppt_file = os.path.join(os.path.dirname(__file__), "testformodbus.ppsx")
+print(ppt_file)
 presentation = ppt.Presentations.Open(ppt_file)
 
 # Starting slideshow
